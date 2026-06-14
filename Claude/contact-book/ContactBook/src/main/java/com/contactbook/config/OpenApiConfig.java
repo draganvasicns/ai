@@ -5,7 +5,7 @@ import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/** Meta podaci OpenAPI dokumentacije (naslov, verzija, opis). */
+/** OpenAPI documentation metadata (title, version, description). */
 @Configuration
 public class OpenApiConfig {
 
@@ -16,6 +16,6 @@ public class OpenApiConfig {
             new Info()
                 .title("Contact Book API")
                 .version("0.0.1")
-                .description("REST API za upravljanje kontaktima (CRUD)."));
+                .description("REST API for managing contacts (CRUD)."));
   }
 }

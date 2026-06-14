@@ -40,7 +40,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
  */
 @RestController
 @RequestMapping("/api/contacts")
-@Tag(name = "Contacts", description = "CRUD operacije nad kontaktima")
+@Tag(name = "Contacts", description = "CRUD operations on contacts")
 public class ContactController {
 
   private final ContactService service;
@@ -50,34 +50,34 @@ public class ContactController {
   }
 
   @GetMapping
-  @Operation(summary = "Lista svih kontakata")
+  @Operation(summary = "List all contacts")
   public List<Contact> list() {
     return service.findAll();
   }
 
   @GetMapping("/{id}")
-  @Operation(summary = "Vrati kontakt po id-u")
+  @Operation(summary = "Get a contact by id")
   @ApiResponse(
       responseCode = "200",
-      description = "Kontakt pronađen",
+      description = "Contact found",
       content = @Content(schema = @Schema(implementation = Contact.class)))
   @ApiResponse(
       responseCode = "404",
-      description = "Kontakt ne postoji",
+      description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public Contact get(@PathVariable String id) {
     return service.findById(id);
   }
 
   @PostMapping
-  @Operation(summary = "Kreiraj novi kontakt (server dodeljuje id)")
+  @Operation(summary = "Create a new contact (server assigns the id)")
   @ApiResponse(
       responseCode = "201",
-      description = "Kreiran; Location header sadrži URI novog kontakta",
+      description = "Created; the Location header holds the URI of the new contact",
       content = @Content(schema = @Schema(implementation = Contact.class)))
   @ApiResponse(
       responseCode = "400",
-      description = "Validacija nije prošla",
+      description = "Validation failed",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public ResponseEntity<Contact> create(@Valid @RequestBody ContactRequest request) {
     Contact created = service.create(request.toContact());
@@ -90,18 +90,18 @@ public class ContactController {
   }
 
   @PutMapping("/{id}")
-  @Operation(summary = "Zameni postojeći kontakt")
+  @Operation(summary = "Replace an existing contact")
   @ApiResponse(
       responseCode = "200",
-      description = "Kontakt izmenjen",
+      description = "Contact updated",
       content = @Content(schema = @Schema(implementation = Contact.class)))
   @ApiResponse(
       responseCode = "400",
-      description = "Validacija nije prošla",
+      description = "Validation failed",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   @ApiResponse(
       responseCode = "404",
-      description = "Kontakt ne postoji",
+      description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public Contact update(@PathVariable String id, @Valid @RequestBody ContactRequest request) {
     return service.update(id, request.toContact());
@@ -109,11 +109,11 @@ public class ContactController {
 
   @DeleteMapping("/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
-  @Operation(summary = "Obriši kontakt")
-  @ApiResponse(responseCode = "204", description = "Obrisan")
+  @Operation(summary = "Delete a contact")
+  @ApiResponse(responseCode = "204", description = "Deleted")
   @ApiResponse(
       responseCode = "404",
-      description = "Kontakt ne postoji",
+      description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public void delete(@PathVariable String id) {
     service.delete(id);
