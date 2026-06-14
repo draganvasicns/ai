@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: contactbook-backend
+
+# Contact Book specific configuration.
+# The storage layer is pluggable (see com.contactbook.repository.ContactRepository).
+# 'type' selects which implementation is active. For now only "file" exists;
+# a future "database" or "cloud" implementation can be added without touching
+# the rest of the application.
+contactbook:
+  storage:
+    type: file
+    # Path to the JSON file that holds all contacts when type=file.
+    file: ./data/contacts.json
+
+# Allow the React dev server (Vite) to call the API during development.
+cors:
+  allowed-origins:
+    - http://localhost:5173
+    - http://localhost:3000
+
+logging:
+  level:
+    com.contactbook: INFO

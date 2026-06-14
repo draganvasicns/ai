@@ -19,5 +19,8 @@ History:
     Then went to venv with:
         source .venv/bin/activate
     
+    To go out of venv type
+        deactivate
+    
     Installed copilot-sdk with :
         pip install github-copilot-sdk
