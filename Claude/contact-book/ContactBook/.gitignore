@@ -39,3 +39,6 @@ data/
 node_modules/
 frontend/dist/
 npm-debug.log*
+
+### Claude Code (lokalno) ###
+CLAUDE.local.md
