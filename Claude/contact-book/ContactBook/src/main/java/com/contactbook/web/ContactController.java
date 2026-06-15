@@ -10,6 +10,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +45,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 @Tag(name = "Contacts", description = "CRUD operations on contacts")
 public class ContactController {
 
+  private static final Logger log = LoggerFactory.getLogger(ContactController.class);
+
   private final ContactService service;
 
   public ContactController(ContactService service) {
@@ -52,6 +56,7 @@ public class ContactController {
   @GetMapping
   @Operation(summary = "List all contacts")
   public List<Contact> list() {
+    log.info("GET /api/contacts");
     return service.findAll();
   }
 
@@ -66,6 +71,7 @@ public class ContactController {
       description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public Contact get(@PathVariable String id) {
+    log.info("GET /api/contacts/{}", id);
     return service.findById(id);
   }
 
@@ -80,6 +86,7 @@ public class ContactController {
       description = "Validation failed",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public ResponseEntity<Contact> create(@Valid @RequestBody ContactRequest request) {
+    log.info("POST /api/contacts - {} {}", request.firstName(), request.lastName());
     Contact created = service.create(request.toContact());
     URI location =
         ServletUriComponentsBuilder.fromCurrentRequest()
@@ -104,6 +111,7 @@ public class ContactController {
       description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public Contact update(@PathVariable String id, @Valid @RequestBody ContactRequest request) {
+    log.info("PUT /api/contacts/{} - {} {}", id, request.firstName(), request.lastName());
     return service.update(id, request.toContact());
   }
 
@@ -116,6 +124,7 @@ public class ContactController {
       description = "Contact not found",
       content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
   public void delete(@PathVariable String id) {
+    log.info("DELETE /api/contacts/{}", id);
     service.delete(id);
   }
 }
