@@ -42,3 +42,6 @@ npm-debug.log*
 
 ### Claude Code (lokalno) ###
 CLAUDE.local.md
+
+### Local secrets (never commit) ###
+/config/

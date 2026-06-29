@@ -16,6 +16,11 @@ contactbook:
     # Path to the JSON file that holds all contacts when type=file.
     file: ./data/contacts.json
 
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY:}
+  model: claude-sonnet-4-6
+  max-tokens: 1024
+
 # Allow the React dev server (Vite) to call the API during development.
 cors:
   allowed-origins:
