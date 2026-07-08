@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that parses an AWS S3 bucket URI (s3://bucket-name/key/path) and returns a dictionary with 'bucket' and 'key' as separate fields."
+  },
+  {
+    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to all objects in an S3 bucket named 'my-data-bucket'."
+  },
+  {
+    "task": "Write a regular expression that validates AWS access key IDs, which always start with 'AKIA' followed by 16 alphanumeric characters."
+  }
+]
