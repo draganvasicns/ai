@@ -1,11 +1,79 @@
 [
   {
-    "task": "Write a Python function that parses an AWS S3 bucket URI (s3://bucket-name/key/path) and returns a dictionary with 'bucket' and 'key' as separate fields."
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "72",
+      "goal": "endurance performance for marathon training",
+      "restrictions": "vegan diet"
+    },
+    "solution_criteria": [
+      "Meal plan contains exactly 1 day of meals (breakfast, lunch, dinner, and snacks)",
+      "All foods are vegan with complete protein sources (legumes, tofu, nuts, seeds, whole grains)",
+      "Nutritional balance supports endurance athlete needs with adequate carbohydrates, protein, and healthy fats",
+      "Plan is compact and concise (under 400 words)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific dietary constraint (vegan athlete) requiring alternative protein sources and complete nutritional balance"
   },
   {
-    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to all objects in an S3 bucket named 'my-data-bucket'."
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Maximize muscle recovery and protein intake for strength training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers all meals for one full day (breakfast, lunch, dinner, and snacks)",
+      "Each meal emphasizes high protein content (minimum 25-30g per main meal) suitable for muscle recovery",
+      "Plan is compact and concise with clear meal descriptions and approximate nutritional values"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) prioritizing protein intake and muscle recovery meals"
   },
   {
-    "task": "Write a regular expression that validates AWS access key IDs, which always start with 'AKIA' followed by 16 alphanumeric characters."
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "70 kg",
+      "goal": "Marathon training with high-endurance performance requiring 3000+ calories, emphasis on carbohydrates and hydration",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan totals 3000+ calories with carbohydrate-focused macronutrient distribution (55-65% carbs)",
+      "Includes hydration strategy with specific fluid intake recommendations throughout the day",
+      "Provides 5-6 eating occasions (breakfast, snacks, lunch, pre-workout, dinner) in compact format",
+      "All meals are practical and realistic for a single day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrates and hydration"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "75 kg",
+      "goal": "endurance performance with muscle maintenance",
+      "restrictions": "gluten-free, dairy-free"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals and includes snacks appropriate for athletic performance",
+      "All foods are gluten-free and dairy-free with no prohibited ingredients",
+      "Provides adequate protein (approximately 1.2-1.6g per kg bodyweight) and carbohydrates for endurance training support"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an athlete having multiple dietary restrictions (gluten-free, dairy-free) while maintaining athletic performance nutrition standards"
+  },
+  {
+    "prompt_inputs": {
+      "height": "160 cm",
+      "weight": "48 kg",
+      "goal": "Maintain lean physique while optimizing performance and recovery for competitive gymnastics",
+      "restrictions": "Vegetarian, no nuts due to allergy"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals for one day with nutrient-dense, calorie-controlled options appropriate for a 48 kg athlete",
+      "Each meal respects vegetarian diet and avoids nuts",
+      "Plan balances protein, carbohydrates, and healthy fats to support gymnastics performance without excess weight gain"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a lean-sport athlete (gymnast) needing nutrient-dense but calorie-controlled meals for performance without excess weight"
   }
 ]
