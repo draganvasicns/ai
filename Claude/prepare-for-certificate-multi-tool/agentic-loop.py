@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from anthropic import AsyncAnthropic
+from anthropic.lib.tools import ToolError
 from anthropic.lib.tools.mcp import async_mcp_tool
 from dotenv import load_dotenv
 from mcp import ClientSession, StdioServerParameters
@@ -19,6 +20,7 @@ load_dotenv()
 
 MCP_SERVER_SCRIPT = Path(__file__).parent / "mcp-server.py"
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-4-8")
+MAX_DESCRIPTION_LENGTH = 100
 
 ADAPTIVE_THINKING_MODELS = {
     "claude-fable-5",
@@ -31,6 +33,24 @@ ADAPTIVE_THINKING_MODELS = {
 }
 
 
+def _install_description_length_hook(tools) -> None:
+    """Reject tool calls whose 'description' argument exceeds MAX_DESCRIPTION_LENGTH before they reach the MCP server."""
+    for tool in tools:
+        original_call = tool.call
+
+        # Default arg binds each closure to its own original_call (late-binding otherwise).
+        async def hooked_call(input, _original_call=original_call):
+            description = input.get("description") if isinstance(input, dict) else None
+            if isinstance(description, str) and len(description) > MAX_DESCRIPTION_LENGTH:
+                raise ToolError(
+                    f"description is too long ({len(description)} characters); "
+                    f"maximum allowed is {MAX_DESCRIPTION_LENGTH} characters. Please shorten it and try again."
+                )
+            return await _original_call(input)
+
+        tool.call = hooked_call
+
+
 async def run() -> None:
     client = AsyncAnthropic()
     server_params = StdioServerParameters(command=sys.executable, args=[str(MCP_SERVER_SCRIPT)])
@@ -41,6 +61,7 @@ async def run() -> None:
 
             tools_result = await mcp_session.list_tools()
             tools = [async_mcp_tool(t, mcp_session) for t in tools_result.tools]
+            _install_description_length_hook(tools)
 
             print("Connected to mcp-server.py. Available tools:")
             for t in tools_result.tools:

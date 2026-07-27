@@ -6,4 +6,10 @@ dependencies = [
     "mcp[cli]>=1.28.1",
     "anthropic[mcp]>=0.71.0",
     "python-dotenv>=1.2.2",
+    "claude-agent-sdk>=0.2.128",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
 ]

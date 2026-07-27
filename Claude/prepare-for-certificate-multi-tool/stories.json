@@ -1,11 +1,5 @@
 [
   {
-    "title": "Test",
-    "author": "Dragan",
-    "description": "azurirano",
-    "text": "azurirani tekst"
-  },
-  {
     "title": "Nova",
     "author": "Pera",
     "description": "opis nove",
@@ -28,5 +22,17 @@
     "author": "Dragan Vasic",
     "description": "O tome kako je zivot lep",
     "text": "Zivot zna da bule lep sta reci, samo se moras mmnogo truditi"
+  },
+  {
+    "title": "Tito",
+    "author": "Dragan Vasic",
+    "description": "Prica o velikom lideru Jugoslavije",
+    "text": "Josip Broz Tito je bio jedan od najznacajnijih lidera u istoriji Balkana. Vodio je partizanski pokret tokom Drugog svetskog rata i kasnije postao dugogodisnji predsednik Jugoslavije. Pod njegovim vodstvom, Jugoslavija je razvila jedinstveni model socijalizma i igrala vaznu ulogu u Pokretu nesvrstanosti."
+  },
+  {
+    "title": "Jedrenjaci",
+    "author": "Dragan Vasic",
+    "description": "Plovila koja koriste snagu vetra - savršen spoj umetnosti i inženjerstva kroz vekove",
+    "text": "Jedrenjaci su plovila koja koriste snagu vetra za kretanje preko vode. Ova prelepa plovila postoje vekovima i predstavljaju savršen spoj umetnosti i inženjerstva. Od malih sportskih jedrilica do velikih oceanskih jahti, jedrenjaci su fascinirali ljude širom sveta. Jedrenje zahteva veštinu, strpljenje i duboko razumevanje vetra i mora."
   }
 ]
