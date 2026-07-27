@@ -1,0 +1,41 @@
+2026-06-29 07:00:59.226 [main] INFO  c.contactbook.ContactBookApplication - Starting ContactBookApplication using Java 25 with PID 45459 (/home/dvasic/Source/AI/Claude/contact-book/ContactBook/target/classes started by dvasic in /home/dvasic/Source/AI/Claude/contact-book/ContactBook)
+2026-06-29 07:00:59.234 [main] INFO  c.contactbook.ContactBookApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-29 07:01:01.113 [main] INFO  c.contactbook.ContactBookApplication - Started ContactBookApplication in 2.452 seconds (process running for 3.084)
+2026-06-29 07:01:33.886 [http-nio-8080-exec-1] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:01:33.958 [http-nio-8080-exec-2] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:01:38.711 [http-nio-8080-exec-3] INFO  c.contactbook.web.ContactController - DELETE /api/contacts/9e17b6a8-ad27-42ee-a1cf-78f688c8a8ac
+2026-06-29 07:01:41.375 [http-nio-8080-exec-4] INFO  c.contactbook.web.ContactController - DELETE /api/contacts/505772dd-ad88-4aed-ab79-67dc5bac52cd
+2026-06-29 07:01:59.264 [http-nio-8080-exec-5] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:01:59.318 [http-nio-8080-exec-6] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:01.488 [http-nio-8080-exec-7] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:01.501 [http-nio-8080-exec-8] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:08.405 [http-nio-8080-exec-9] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:08.416 [http-nio-8080-exec-10] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:10.679 [http-nio-8080-exec-1] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:10.688 [http-nio-8080-exec-2] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:23.352 [http-nio-8080-exec-3] INFO  c.contactbook.web.ContactController - PUT /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73 - Dragan Vasic
+2026-06-29 07:02:23.372 [http-nio-8080-exec-4] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:23.379 [http-nio-8080-exec-5] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:25.719 [http-nio-8080-exec-6] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:25.727 [http-nio-8080-exec-7] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:34.291 [http-nio-8080-exec-8] INFO  c.contactbook.web.ContactController - PUT /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73 - Dragan Vasic
+2026-06-29 07:02:34.312 [http-nio-8080-exec-9] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:34.320 [http-nio-8080-exec-10] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:37.262 [http-nio-8080-exec-1] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:37.271 [http-nio-8080-exec-2] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:48.211 [http-nio-8080-exec-3] INFO  c.contactbook.web.ContactController - PUT /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73 - Dragan Vasic
+2026-06-29 07:02:48.230 [http-nio-8080-exec-4] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:48.236 [http-nio-8080-exec-5] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:53.361 [http-nio-8080-exec-6] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:53.370 [http-nio-8080-exec-7] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:56.897 [http-nio-8080-exec-8] INFO  c.contactbook.web.ContactController - PUT /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73 - Dragan Vasic
+2026-06-29 07:02:56.919 [http-nio-8080-exec-9] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:56.930 [http-nio-8080-exec-10] INFO  c.contactbook.web.ContactController - GET /api/contacts/bd27e119-facf-4cc7-93b4-0b9250b7df73
+2026-06-29 07:02:59.820 [http-nio-8080-exec-1] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:02:59.828 [http-nio-8080-exec-2] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:35:10.185 [main] INFO  c.contactbook.ContactBookApplication - Starting ContactBookApplication using Java 25 with PID 53867 (/home/dvasic/Source/AI/Claude/contact-book/ContactBook/target/classes started by dvasic in /home/dvasic/Source/AI/Claude/contact-book/ContactBook)
+2026-06-29 07:35:10.191 [main] INFO  c.contactbook.ContactBookApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-29 07:35:12.343 [main] INFO  c.contactbook.ContactBookApplication - Started ContactBookApplication in 2.797 seconds (process running for 3.136)
+2026-06-29 07:35:12.926 [http-nio-8080-exec-1] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:35:13.317 [http-nio-8080-exec-2] INFO  c.contactbook.web.ContactController - GET /api/contacts
+2026-06-29 07:35:18.204 [http-nio-8080-exec-4] INFO  com.contactbook.web.ChatController - POST /api/chat - 3 messages
