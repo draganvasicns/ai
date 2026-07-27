@@ -55,6 +55,7 @@ async def run() -> None:
                 if query.lower() in  ("/clear"):
                     history.clear()
                     print("Context cleared")
+                    continue
                 if not query:
                     continue
 
@@ -87,7 +88,7 @@ async def run() -> None:
                         print("\n[end_turn: Claude je zavrsio odgovor]")
 
                 history.append({"role": "assistant", "content": final_content})
-                print(f"... nbr elements in context {len(history)} ")
+                print(f"[...nbr elements in context {len(history)}]")
 
 
 if __name__ == "__main__":
