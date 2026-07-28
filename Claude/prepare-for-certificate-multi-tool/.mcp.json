@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "random-names": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "mcp-random-names-server.py"
+      ],
+      "env": {
+        "RANDOM_NAMES_API_KEY": "${RANDOM_NAMES_API_KEY:-demo-local-key}"
+      }
+    }
+  }
+}
